@@ -146,18 +146,6 @@ function nextQuestion() {
     }
 }
 
-function displayQuestion(questionNumber) {
-  const questionContainer = document.getElementById("questionContainer");
-  
-  // Check if the question number is within the valid range
-  if (questionNumber >= 1 && questionNumber <= questions.length) {
-    const question = questions[questionNumber - 1]; // Adjust for zero-based indexing
-    questionContainer.innerHTML = `<p>Question ${questionNumber}: ${question}</p>`;
-  } else {
-    questionContainer.innerHTML = "<p>Invalid question number</p>";
-  }
-}
-
 function endQuiz() {
     const quizContainer = document.getElementById("quiz-container");
     quizContainer.innerHTML = `<h2>Quiz Completed!</h2><p>Your Score: ${score}/${quizData.length}</p>`;
